@@ -1,0 +1,13 @@
+replicaCount: 3
+image:
+  repository: registry.gitlab.com/bikash3790747/taskpro/taskpro
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  name: my-app-service
+  type: ClusterIP
+  port: 80
+
+imagePullSecrets:
+  - name: my-registry-secret
